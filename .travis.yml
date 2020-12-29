@@ -4,7 +4,7 @@ services:
 env:
   global:
   - SHA=$(git rev-parse HEAD)
-  - CLOUDSDK_CORE_DISABLE_PROMPTS=1
+  - CLOUDSDK_CORE_DISABLE_PROMPTS=1  
 before_install:
 - openssl aes-256-cbc -K $encrypted_d695a5d97c14_key -iv $encrypted_d695a5d97c14_iv -in service-account-gcp.json.enc -out service-account-gcp.json -d
 - curl https://sdk.cloud.google.com | bash > /dev/null;
